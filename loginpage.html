@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./loginpage.css" />
+    <script>
+      function showContent(t) {
+          (t =='Registration' )? x=false:x=true;
+            document.getElementById("registration").hidden=x;
+      (t =='Number')? x=false:x=true;
+            document.getElementById("number").hidden=x;
+          (t =='Email')? x=false:x=true;
+            document.getElementById("email").hidden=x;
+      }
+      function sendOTP() {
+        function generateOTP() {
+  // Declare a digits variable
+  // which stores all digits 
+  let digits = '0123456789';
+  let OTP = '';
+  for (let i = 0; i < 4; i++) {
+    OTP += digits[Math.floor(Math.random() * 10)];
+  }
+  return OTP;
+}
+// Display an alert message with the generated OTP
+alert("OTP of 4 digits: " + generateOTP());
+        }
+      </script>
+  </head>
+  <body>
+    <div class="rectangle-parent">
+      <div class="frame-child">
+      <div>
+      <button class="registration" onclick="showContent('Registration');">Registration</button>
+      <button class="login-with-number" onclick="showContent('Number');">Login with Number</button>
+      <button class="login-with-email" onclick="showContent('Email');">Login with Email</button>
+      </div>
+    <!--Registration form-->
+    <div id="registration"hidden>
+      <b class="registration-form">Registration Form</b>
+      <input class="frame-child1" type="text" />
+      <input class="frame-child2" type="password" />
+      <input class="frame-child3" type="number" />
+      <input class="frame-child4" type="email" />
+      <b class="full-name">Full Name</b>
+      <b class="password">Password</b>
+      <b class="phone-number">Phone Number</b>
+      <b class="email">Email</b>
+      <button class="login">Login</button>
+    </div>
+    <!--login with email-->
+    <div id="email" hidden>
+        <b class="login-email">Login with email</b>
+        <b class="email1">Email</b>
+        <input class="frame-item1" type="email" />
+        <b class="password1">Password</b>
+        <input class="frame-item2" type="text" required />
+        <button class="button2">Login</button>
+    </div>
+    <!--login with number-->
+    <div id="number">
+        <b class="login-number">Login with number</b>
+        <b class="number1">Number</b>
+        <input class="frame-item3" type="number" required maxlength="10" />
+        <b class="otp1">OTP</b>
+        <input class="frame-item4" type="number" required maxlength="4" />
+        <button class="button1">Login</button>
+        <button class="button" onclick="sendOTP()">Generate OTP</button>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>

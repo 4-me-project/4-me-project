@@ -1,0 +1,319 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-scheherazade-new: "Scheherazade New";
+  --font-stix-two-text: "STIX Two Text";
+  --font-cinzel: Cinzel;
+
+  /* font sizes */
+  --font-size-16xl: 35px;
+  --font-size-45xl: 64px;
+
+  /* Colors */
+  --color-black: #000;
+  --color-gainsboro: #d9d9d9;
+  --color-gray: rgba(0, 0, 0, 0.3);
+  --color-aliceblue: #f2f6fc;
+
+  /* Border radiuses */
+  --br-11xl: 27px;
+}
+.rectangle-parent {
+  position: absolute;
+  background-color: #f8db73;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: left;
+  /* font-size: var(--font-size-16xl); */
+  /* color: var(--color-black); */
+  /* font-family: var(--font-stix-two-text); */
+}
+.frame-child,
+.registration,
+.login-with-email,
+.login-with-number {
+  position: absolute;
+  /* border-radius: var(--br-11xl); */
+  box-sizing: border-box;
+}
+.frame-child {
+  position: absolute;
+  top: 7%;
+  left: 25%;
+  background: linear-gradient(
+    136.21deg,
+    #ffcb12,
+    rgba(275, 203, 18, 0) 50.52%,
+    #ffcb12
+  );
+  border: 1px solid var(--color-black);
+  width: 50%;
+  height: 85%;
+  /* opacity: 0.7; */
+}
+.registration,
+.login-with-number,
+.login-with-email {
+  cursor: pointer;
+  border: 1px solid var(--color-black);
+  padding: 0;
+  background-color: var(--color-aliceblue);
+  top: 87%;
+  /* left: 27%;
+  width: 560px;
+  height: 158px; */
+  /* opacity: 1.0; */
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+}
+.registration{
+  position: absolute;
+  left: 8%;
+  width: 25%;
+  height: 8%;
+}
+.login-with-number {
+  position: absolute;
+  left: 36%;
+  width: 28%;
+  height: 8%;
+}
+.login-with-email {
+  position: absolute;
+  left: 68%;
+  width: 28%;
+  height: 8%;
+  right: 8%;
+}
+
+/* registration form page */
+
+.registration-form {
+  position: absolute;
+  display: inline-block;
+  top: 8%;
+  left: 5%;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.full-name {
+  position: absolute;
+  display: inline-block;
+  top: 18%;
+}
+.frame-child1{
+  top: 22%;
+}
+.password{
+  position: absolute;
+  display: inline-block;
+  top: 30%;
+}
+.frame-child2{
+top: 34%;
+}
+.phone-number{
+  position: absolute;
+  display: inline-block;
+  top:42%;
+}
+.frame-child3{
+  top:46% ;
+}
+.email{
+  position: absolute;
+  display: inline-block;
+  top:54%;
+}
+.frame-child4 {
+  top: 58%;
+}
+.frame-child1,
+.frame-child2,
+.frame-child3,
+.frame-child4 {
+  border: 1px solid var(--color-black);
+  outline: 0;
+  position: absolute;
+  box-sizing: border-box;
+  width: 90%;
+  height: 5%;
+  opacity: 0.7;
+  font-size: 18px;
+  font-style: italic;
+}
+.frame-child1,
+.frame-child2,
+.frame-child3,
+.frame-child4,
+.full-name,
+.password,
+.email,
+.phone-number{
+  left: 5%;
+}
+.login {
+  cursor: pointer;
+  border: 1px solid var(--color-black);
+  padding: 0;
+  position: absolute;
+  height: 6%;
+  width: 25%;
+  top: 70%;
+  bottom: 36.53%;
+  left: 35%;
+  box-sizing: border-box;
+  /* opacity: 0.7; */
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* login with email */
+
+.login-email {
+  position: absolute;
+  display: inline-block;
+  top: 10%;
+  left: 5%;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: italic;
+}
+.email1,
+.frame-item1,
+.frame-item2,
+.password1{
+  left: 5%;
+}
+.email1 {
+    position: absolute;
+    top: 20%;
+    display: inline-block;
+    font-style: italic;
+}
+.frame-item1{
+  top: 24%;
+}
+.password1{
+  position: absolute;
+  display: inline-block;
+  top: 32%;
+  font-style: italic;
+}
+.frame-item2{
+  top: 36%;
+}
+.frame-item1,
+.frame-item2 {
+  border: 1px solid var(--color-black);
+  position: absolute;
+  box-sizing: border-box;
+  width: 90%;
+  height: 5%;
+  font-size: 18px;
+  font-style: italic;
+}
+.button2 {
+  cursor: pointer;
+  border: 1px solid var(--color-black);
+  padding: 0;
+  position: absolute;
+  height: 6%;
+  width: 25%;
+  top: 50%;
+  bottom: 36.53%;
+  left: 35%;
+  box-sizing: border-box;
+  /* opacity: 0.7; */
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* login with number */
+
+.login-number{
+  position: absolute;
+  display: inline-block;
+  top: 10%;
+  left: 5%;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: italic;
+}
+.frame-item3,
+.frame-item4,
+.otp1,
+.number1{
+  left:5%;
+}
+
+.number1{
+  position: absolute;
+  top: 20%;
+  display: inline-block;
+}
+.frame-item3{
+  top: 24%;
+}
+.button {
+  cursor: pointer;
+  border: 1px solid var(--color-black);
+  padding: 0;
+  position: absolute;
+  height: 6%;
+  width: 25%;
+  top: 33%;
+  bottom: 36.53%;
+  left: 35%;
+  box-sizing: border-box;
+  /* opacity: 0.7; */
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 600;
+}
+.otp1 {
+  position: absolute;
+  display: inline-block;
+  top: 39%;
+}
+.frame-item4{
+  top: 43%;
+}
+.button1 {
+  cursor: pointer;
+  border: 1px solid var(--color-black);
+  padding: 0;
+  position: absolute;
+  height: 6%;
+  width: 25%;
+  top: 52%;
+  bottom: 36.53%;
+  left: 35%;
+  box-sizing: border-box;
+  /* opacity: 0.7; */
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 600;
+} 
+.frame-item3,
+.frame-item4{
+  border: 1px solid var(--color-black);
+  position: absolute;
+  box-sizing: border-box;
+  width: 90%;
+  height: 5%;
+  font-size: 18px;
+  font-style: italic;
+}

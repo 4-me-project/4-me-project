@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./editprofile.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Scheherazade New:wght@700&display=swap"
+    />
+  </head>
+  <body>
+    <script>
+      var loadFile = function (event) {
+var image = document.getElementById("output");
+image.src = URL.createObjectURL(event.target.files[0]);
+};
+  </script>
+    <div class="rectangle-parent">
+      <div class="frame-child">
+      <b class="full-name">Name</b>
+      <input class="frame-item" type="text" />
+      <b class="username">About</b>    
+      <input class="frame-inner" type="text" />
+      <a href="account.html"><button class="rectangle-button">Save</button></a>
+      <!-- <div class="icon-user-circle">
+        <input  class="icon-user-circle" type="file">
+        <img class="vector-icon" alt="" src="elon_musk.jpg"/>
+      </div> -->
+      <div class="profile-pic">
+        <label class="-label" for="file">
+          <span class="glyphicon glyphicon-camera"></span>
+          <span>Change Image</span>
+        </label>
+        <input id="file" type="file" onchange="loadFile(event)"/>
+        <img src=elon_musk.jpg id="output" width="200" />
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
+
