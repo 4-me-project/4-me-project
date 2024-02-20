@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Notification Dropdown</title>
+    <link rel="stylesheet" href="notify.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="notification_wrap">
+            <div class="notification_icon">
+                <i class="fas fa-bell"></i>
+            </div>
+            <div class="dropdown">
+                <p id="log-msg">You have successfully logged in!!!</p>
+                <!-- Add more notifications dynamically -->
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // Notification ka data h, aisa data database m store rahega
+        let notificationData = [
+
+            /*
+            ! notificatinoTitle -> to store title of notification
+            ! notificationContent -> to store content of notification
+            ! imagePath -> har notification ki alag image rahegi isliye image ka path hi database m store rahega fir iss path se image dikhegi
+            */
+            { notificationTitle: "Notification of new product", notificationContent: "This is notification content", imagePath: "images/book.jpg" },
+            { notificationTitle: "Notification of new product", notificationContent: "This is notification content", imagePath: "images/book.jpg" },
+            { notificationTitle: "Notification of new product", notificationContent: "This is notification content", imagePath: "images/book.jpg" },
+            { notificationTitle: "Notification of new product", notificationContent: "This is notification content", imagePath: "images/book.jpg" },
+            { notificationTitle: "Notification of new product", notificationContent: "This is notification content", imagePath: "images/book.jpg" },
+            { notificationTitle: "Notification of new product", notificationContent: "This is notification content", imagePath: "images/book.jpg" },
+        ]
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var bellIcon = document.querySelector(".notification_icon .fa-bell");
+            bellIcon.addEventListener('click', function () {
+                var dropdown = document.querySelector(".dropdown");
+                dropdown.classList.toggle("active");
+            });
+        });
+
+        function activeNotify(e) {
+            e.querySelector(".active").style.display = "none";
+        }
+
+
+        for (let i = 0; i < notificationData.length; i++) {
+            document.querySelector(".dropdown").innerHTML += `<div class="notify_item" onclick="activeNotify(this)">
+			<div class="notify_img">
+				<img src="${notificationData[i].imagePath}" alt="profile_pic" style="width: 50px">
+			</div>
+			<div class="notify_info">
+				<p>${notificationData[i].notificationTitle}</p>
+				<span class="notify_time">10 minutes ago</span>
+			</div>
+			<div class="active"></div>
+			<div class="delete" onclick="deleteNotifaction(${i}, this)">
+				<div class="icon-container">
+					<i class="fas fa-trash-alt"></i>
+				</div>
+			</div>
+		</div>`;
+        }
+        function deleteNotifaction(notificationNumber, deleteButton) {
+            notificationData.splice(notificationNumber, 1);
+            console.log(notificationData)
+            console.log(deleteButton)
+            deleteButton.parentElement.style.opacity = '0';
+            setTimeout(() => {
+                deleteButton.parentElement.style.height = '0'
+                deleteButton.parentElement.style.padding = '0'
+            }, 350);
+            setTimeout(() => {
+
+                deleteButton.parentElement.style.display = 'none'
+            }, 2000);
+
+        }
+    </script>
+</body>
+
+</html>
