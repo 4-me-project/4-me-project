@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Level Chat-Box UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="msg-container" id="msg-container">
+        <div class="chat-box">
+            <div class="client">
+                <img src=".\images\prof-img.jpeg" alt="logo" />
+                <div class="client-info">
+                    <h2>Person_name</h2>
+                </div>
+                <button class="close-btn" id="closeChat">
+                    <img src= ".\images\close-btn.png" alt="close">
+                </button>
+            </div>
+            <div class="product-container">
+                <img class="product-img" alt="" src=".\images\electronic.jpg" />
+                <div style="margin-left: 20px;">
+                    <p class="product-name">
+                        <b>Product_name</b>
+                    </p>
+                    <p class="prod-cost">rs. prod_cost</p>
+                </div>
+            </div>
+            <div class="chats">
+                <div class="client-chat">
+                    <p>Hi!</p>
+                </div>
+                <div class="my-chat">
+                    <p>Hi!</p>
+                </div>
+                <div class="client-chat">
+                    <p>How can I help you?</p>
+                </div>
+                <div class="my-chat">
+                    <p>How did you create this chat box?</p>
+                </div>
+                <div class="client-chat">
+                    <p>Watch the complete video for your answer.</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Enter Message" id="msg-box" onkeypress="sendMessageOnKey(event)" />
+                <button class="send-btn" onclick="sendMessage()">
+                    <img src= "images\send.256x253.png" alt="send-btn">
+                </button>
+            </div>
+        </div>
+        <div class="chat-btn">
+            <img src="./images/Circle-icons-chat.svg.png" alt="chat box icon btn" onclick="show()">
+        </div>
+    </div>
+    <script>
+        function show() {
+            document.getElementById("msg-container").classList.toggle('show-chat')
+        }
+
+        function sendMessage() {
+            var content = document.getElementById('msg-box');
+            div = document.createElement('div');
+            p = document.createElement('p');
+            p.innerText = content.value;
+            div.appendChild(p);
+            div.setAttribute('class', 'my-chat');
+            var chats = document.querySelector('.chats');
+            chats.appendChild(div);
+            document.getElementById('msg-box').value = "";
+            chats.scrollTop = chats.scrollHeight;
+        }
+
+        function sendMessageOnKey(e) {
+            if (e.keyCode == 13) {
+                sendMessage();
+            }
+        }
+
+        // close button functionality
+        document.addEventListener('DOMContentLoaded', function () {
+         var closeButton = document.getElementById('closeChat');
+        closeButton.addEventListener('click', function () {
+        var chatBox = document.getElementById('msg-container');
+        chatBox.style.display = 'none'; 
+        });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
