@@ -1,0 +1,177 @@
+/* .r-1 {
+    position: absolute;
+    top: 226px;
+    left: 93px;
+    width: 100%;
+    height: 100%;
+} */
+.frame-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: brightness(50%); */
+   
+}
+.frame-item {
+    position: absolute;
+    top: 0px;
+    left: -89px;
+    width: 1991px;
+    height: 1022px;
+    opacity: 0.7;
+}
+.frame-inner {
+    position: relative;
+    top: 7%;
+    left: 25%;
+    background: linear-gradient(
+        136.21deg,
+        /* #ffcb12,
+        rgba(255, 203, 18, 0) 50.52%,
+        #ffcb12 */
+        #ffcb12,
+        rgba(255, 203, 18, 0) 50.52%,
+        #ffcb12
+      );
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 50%;
+    height: 85%;
+    bottom:7%;
+}
+/* .frame-inner {
+    position: absolute;
+    top: 50px;
+    left: 572px;
+    background: linear-gradient(136.21deg, #ffcb12,rgba(255, 203, 18, 0) 50.52%, #ffcb12 );
+    border: 1px solid #000;
+    box-sizing: border-box;
+    width: 827px;
+    height: 913px;
+} */
+.rectangle-button {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 22%;
+    left: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    height: 6%;
+    opacity: 0.9;
+    font-size: 20px;
+    font-style: italic;
+    border: 1px solid #000;
+    font-weight: 700;
+}
+.frame-child1 {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 33%;
+    left: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    height: 6%;
+    opacity: 0.9;
+}
+.frame-child2 {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 44%;
+    left: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    height: 6%;
+    opacity: 0.9;
+}
+.frame-child3 {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    height: 6%;
+    opacity: 0.9;
+}
+
+.frame-child4 {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 66%;
+    left: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    height: 6%;
+    opacity: 0.9;
+}
+.frame-child5 {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 77%;
+    left: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    height: 6%;
+    opacity: 0.9;
+}
+
+.frame-child6 {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 88%;
+    left: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    height: 6%;
+    opacity: 100%;
+}
+.r-1-parent {
+    width: 100%;
+    position: absolute;
+    background-color:#f8db73;
+    height: 100%;
+    overflow: hidden;
+    text-align: left;
+    font-size: 36px;
+    color: #000;
+    font-family: Inter;
+}
+.frame-child1,.frame-child2,.frame-child3,.frame-child4,.frame-child4,.frame-child5,.frame-child6{
+    font-size: 20px;
+    font-style: italic;
+    border: 1px solid #000;
+    font-weight: 700;
+}
+.font{
+    position: absolute;
+    top:8%;
+    font-size: 35px;
+    left:10%;
+    font-weight: 900;
+    color: black;
+}
+
