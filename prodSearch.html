@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="container2">
+            <div><input class="desktop-13-child14" type="text" placeholder="search your product here......."
+                    id="searchInput"></div>
+            <img class="user-circle-single-circle-geo-icon" alt="" src="notifications-1.png" class="img-fluid">
+            <img class="vector-icon" alt="" src="account.png" class="img-fluid">
+            <img class="desktop-13-child15" alt="" src="images.png">
+
+        </div>
+        <!-- <div class="container3">
+                <div class="sell">SELL</div>
+                <div class="home">HOME</div>
+            </div> -->
+
+
+
+        <div class="grid-container" id="productGrid">
+            <!-- Products will be dynamically added here -->
+        </div>
+
+
+
+    </div>
+
+</body>
+<script>
+   document.getElementById('searchInput').addEventListener('keyup', function (event) {
+        if (event.key === 'Enter') {
+            submitSearch();
+        }
+    });
+
+
+    function submitSearch() {
+        var searchInput = document.getElementById('searchInput').value;
+        ///Replace the URL below with the actual URL of your product page
+     //// var productPageURL = "prodsearch.html" + encodeURIComponent(searchTerm);
+
+        // Check if the search input is not empty
+        if (searchInput!= 'books') {
+            // Redirect to the products page with the product name as a query parameter
+            window.location.href = "prodNOfound.html";
+        } else {
+            window.location.href = "prodSearch.html";
+        }
+    }
+    // Sample product data
+    var products = [
+        {
+            name: "Product 1",
+            price: "$10",
+            image: "https://via.placeholder.com/150"
+        },
+        {
+            name: "Product 2",
+            price: "$20",
+            image: "https://via.placeholder.com/150"
+        },
+        {
+            name: "Product 3",
+            price: "$30",
+            image: "https://via.placeholder.com/150"
+        },
+        {
+            name: "Product 4",
+            price: "$40",
+            image: "https://via.placeholder.com/150"
+        },
+        {
+            name: "Product 5",
+            price: "$50",
+            image: "https://via.placeholder.com/150"
+        },
+        {
+            name: "Product 6",
+            price: "$60",
+            image: "https://via.placeholder.com/150"
+        }
+    ];
+
+    // Function to create product elements
+    function createProductElement(product) {
+        var productDiv = document.createElement('div');
+        productDiv.classList.add('product');
+
+        var image = document.createElement('img');
+        image.src = product.image;
+        productDiv.appendChild(image);
+
+        var name = document.createElement('div');
+        name.textContent = product.name;
+        productDiv.appendChild(name);
+
+        var price = document.createElement('div');
+        price.textContent = product.price;
+        productDiv.appendChild(price);
+
+        return productDiv;
+    }
+
+    // Function to populate the grid with products
+    function populateGrid() {
+        var gridContainer = document.getElementById('productGrid');
+        products.forEach(function (product) {
+            var productElement = createProductElement(product);
+            gridContainer.appendChild(productElement);
+        });
+    }
+
+    // Populate the grid on page load
+    populateGrid();
+</script>
+
+</html>

@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="container2">
+            <div><input class="desktop-13-child14" type="text" placeholder="search your product here......."
+                    id="searchInput">
+            </div>
+            <img class="user-circle-single-circle-geo-icon" alt="" src="notifications-1.png" class="img-fluid">
+
+            <img class="vector-icon" alt="" src=".\images\user-circle.png" class="img-fluid">
+            <img class="desktop-13-child15" alt="" src=".\images\logo.png">
+
+        </div>
+
+        <div class="sell">SELL</div>
+        <div class="home">HOME</div>
+        <div class="about">ABOUT</div>
+
+        <div class="image"><img class="img" alt="" src=".\images\front.jpg">
+            <div class="imglay2">"Reimagine,Reuse,Revolve:Your Secondhand Tresure Trove!"</div>
+        </div>
+        <div class="container3">
+            <div class="electronics"><img class="elec1" alt="" src=".\images\electronic.jpg">
+                <div class="overlay1"><a href="">ELECTRONICS</a></div>
+            </div>
+            <div class="homeappliances"><img class="home1" alt="" src=".\images\homeapply.jpg">
+                <div class="overlay2"><a href="">HOME</a></div>
+            </div>
+            <div class="rooms"><img class="room1" alt="" src=".\images\rooms3.jpg">
+                <div class="overlay3"><a href="">ROOM</a></div>
+            </div>
+            <div class="furniture"><img class="fur1" alt="" src=".\images\furniture.jpg">
+                <div class="overlay4"><a href="">FURNITURE</a></div>
+            </div>
+            <div class="stationary"><img class="sta1" alt="" src=".\images\stationary.jpg">
+                <div class="overlay5"><a href="">STATIONARY</a></div>
+            </div>
+            <div class="vehicles"><img class="vehi" alt="" src=".\images\cycle.jpg">
+                <div class="overlay6"><a href="">VEHICLE</a></div>
+            </div>
+            <div class="books"><img class="book1" alt="" src=".\images\books2.jpg">
+                <div class="overlay7"><a href="">BOOKS</a></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    document.getElementById('searchInput').addEventListener('keyup', function (event) {
+        if (event.key === 'Enter') {
+            submitSearch();
+        }
+    });
+    function submitSearch() {
+        var searchInput = document.getElementById('searchInput').value;
+        ///Replace the URL below with the actual URL of your product page
+     //// var productPageURL = "prodsearch.html" + encodeURIComponent(searchTerm);
+
+        // Check if the search input is not empty
+        if (searchInput!= 'books') {
+            // Redirect to the products page with the product name as a query parameter
+            window.location.href = "prodNOfound.html";
+        } else {
+            window.location.href = "prodSearch.html";
+        }
+    }
+</script>
+
+
+</html>

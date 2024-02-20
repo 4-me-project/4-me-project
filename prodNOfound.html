@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="container2">
+            <div><input class="desktop-13-child14" type="text" placeholder="search your product here......."
+                    id="searchInput" onkeydown="checkEnter(event)"></div>
+            <img class="user-circle-single-circle-geo-icon" alt="" src="notifications-1.png" class="img-fluid">
+            <img class="vector-icon" alt="" src="account.png" class="img-fluid">
+            <img class="desktop-13-child15" alt="" src="images.png">
+
+        </div>
+        <!-- <div class="container3">
+                <div class="sell">SELL</div>
+                <div class="home">HOME</div>
+            </div> -->
+            <div class="prod-not-found"> 
+                <img class="cam-icon" src=".\images\camera-icon.png" alt="Product not found">
+                <div class="not-found">Product not found..... </div>
+
+            </div>   
+  
+    </div>
+
+</body>
+<script>
+     document.getElementById('searchInput').addEventListener('keyup', function (event) {
+        if (event.key === 'Enter') {
+            submitSearch();
+        }
+    });
+
+
+    function submitSearch() {
+        var searchInput = document.getElementById('searchInput').value;
+        ///Replace the URL below with the actual URL of your product page
+     //// var productPageURL = "prodsearch.html" + encodeURIComponent(searchTerm);
+
+        // Check if the search input is not empty
+        if (searchInput!= 'books') {
+            // Redirect to the products page with the product name as a query parameter
+            window.location.href = "prodNOfound.html";
+        } else {
+            window.location.href = "prodSearch.html";
+        }
+    }
+</script>
+
+</html>
