@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="container2">
+            <div><input class="desktop-13-child14" type="text" placeholder="search your product_name here......."
+                    id="searchInput"></div>
+            <img class="user-circle-single-circle-geo-icon" alt="" src="notifications-1.png" class="img-fluid">
+            <img class="vector-icon" alt="" src=".\images\prof-img.jpeg" class="img-fluid" style="border-radius: 70%;">
+            <img class="desktop-13-child15" alt="" src=".\images\logo.png">
+
+        </div>
+        <!-- <div class="container3">
+                <div class="sell">SELL</div>
+                <div class="home">HOME</div>
+            </div> -->
+
+
+
+        <div class="grid-container" id="product_nameGrid">
+            <!-- Product_names will be dynamically added here -->
+            <div class="product_name">
+                <img src="product_name1.jpg" alt="Product_name 1">
+                <h3>Product_name </h3>
+                <p>Rs.19.99</p>
+            </div>
+            <div class="product_name">
+                <img src="product_name2.jpg" alt="Product_name 2">
+                <h3>Product_name </h3>
+                <p>Rs.100.00</p>
+            </div>
+            <div class="product_name">
+                <img src="product_name3.jpg" alt="Product_name 3">
+                <h3>Product_name </h3>
+                <p>Rs.100.00</p>
+            </div>
+            <div class="product_name">
+                <img src="product_name4.jpg" alt="Product_name 4">
+                <h3>Product_name </h3>
+                <p>Rs.100.00</p>
+            </div>
+            <div class="product_name">
+                <img src="product_name5.jpg" alt="Product_name 5">
+                <h3>Product_name </h3>
+                <p>Rs.100.00</p>
+            </div>
+            <div class="product_name">
+                <img src="product_name6.jpg" alt="Product_name 6">
+                <h3>Product_name </h3>
+                <p>Rs.100.00</p>
+            </div>
+            <div class="product_name">
+                <img src="product_name7.jpg" alt="Product_name 7">
+                <h3>Product_name </h3>
+                <p>Rs.100.00</p>
+            </div>
+            <div class="product_name">
+                <img src="product_name8.jpg" alt="Product_name 8">
+                <h3>Product_name </h3>
+                <p>Rs.100.00</p>
+            </div>
+            <div class="product_name">
+                <img src="product_name9.jpg" alt="Product_name 9">
+                <h3>Product_name </h3>
+                <p>Rs.100.00</p>
+            </div>
+            <div class="product_name">
+                <img src="product_name10.jpg" alt="Product_name 10">
+                <h3>Product_name </h3>
+                <p>Rs.100.00</p>
+            </div>
+            <!-- Add more product_name items as needed -->
+        </div>
+    </div>
+
+
+
+    </div>
+
+</body>
+<script>
+    document.getElementById('searchInput').addEventListener('keyup', function (event) {
+        if (event.key === 'Enter') {
+            submitSearch();
+        }
+    });
+
+
+    function submitSearch() {
+        var searchInput = document.getElementById('searchInput').value;
+        ///Replace the URL below with the actual URL of your product_name page
+        //// var product_namePageURL = "prodsearch.html" + encodeURIComponent(searchTerm);
+
+        // Check if the search input is not empty
+        if (searchInput != 'books') {
+            // Redirect to the product_names page with the product_name name as a query parameter
+            window.location.href = "prodNOfound.html";
+        } else {
+            window.location.href = "prodSearch.html";
+        }
+    }
+
+    // Function to create product_name elements
+    function createProduct_nameElement(product_name) {
+        var product_nameDiv = document.createElement('div');
+        product_nameDiv.classList.add('product_name');
+
+        var image = document.createElement('img');
+        image.src = product_name.image;
+        product_nameDiv.appendChild(image);
+
+        var name = document.createElement('div');
+        name.textContent = product_name.name;
+        product_nameDiv.appendChild(name);
+
+        var price = document.createElement('div');
+        price.textContent = product_name.price;
+        product_nameDiv.appendChild(price);
+
+        return product_nameDiv;
+    }
+
+    // Function to populate the grid with product_names
+    function populateGrid() {
+        var gridContainer = document.getElementById('product_nameGrid');
+        product_names.forEach(function (product_name) {
+            var product_nameElement = createProduct_nameElement(product_name);
+            gridContainer.appendChild(product_nameElement);
+        });
+    }
+
+    // Populate the grid on page load
+    populateGrid();
+</script>
+
+</html>
